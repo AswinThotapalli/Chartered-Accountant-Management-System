@@ -1,0 +1,15 @@
+C:\Users\Atezaz\Desktop\My Code\CharteredAccountantsFYP\CharteredAccountantsFYP\bin\CharteredAccountantsFYP.dll.config
+C:\Users\Atezaz\Desktop\My Code\CharteredAccountantsFYP\CharteredAccountantsFYP\bin\CharteredAccountantsFYP.dll
+C:\Users\Atezaz\Desktop\My Code\CharteredAccountantsFYP\CharteredAccountantsFYP\bin\CharteredAccountantsFYP.pdb
+C:\Users\Atezaz\Desktop\My Code\CharteredAccountantsFYP\CharteredAccountantsFYP\obj\Debug\CharteredAccountants.csprojResolveAssemblyReference.cache
+C:\Users\Atezaz\Desktop\My Code\CharteredAccountantsFYP\CharteredAccountantsFYP\obj\Debug\CharteredAccountants.csproj.CoreCompileInputs.cache
+C:\Users\Atezaz\Desktop\My Code\CharteredAccountantsFYP\CharteredAccountantsFYP\obj\Debug\CharteredAccountantsFYP.dll
+C:\Users\Atezaz\Desktop\My Code\CharteredAccountantsFYP\CharteredAccountantsFYP\obj\Debug\CharteredAccountantsFYP.pdb
+C:\Users\ashua\Downloads\CharteredAccountants-master\CharteredAccountants-master\CharteredAccountants\obj\Debug\CharteredAccountants.csproj.AssemblyReference.cache
+C:\Users\ashua\Downloads\CharteredAccountants-master\CharteredAccountants-master\CharteredAccountants\obj\Debug\CharteredAccountants.csproj.CoreCompileInputs.cache
+C:\Users\ashua\Downloads\CharteredAccountants-master\CharteredAccountants-master\CharteredAccountants\obj\Debug\CharteredAccountantsFYP.dll
+C:\Users\ashua\Downloads\CharteredAccountants-master\CharteredAccountants-master\CharteredAccountants\obj\Debug\CharteredAccountantsFYP.pdb
+D:\CharteredAccountants-master\CharteredAccountants-master\CharteredAccountants\obj\Debug\CharteredAccountants.csproj.AssemblyReference.cache
+D:\CharteredAccountants-master\CharteredAccountants-master\CharteredAccountants\obj\Debug\CharteredAccountants.csproj.CoreCompileInputs.cache
+D:\CharteredAccountants-master\CharteredAccountants-master\CharteredAccountants\obj\Debug\CharteredAccountantsFYP.dll
+D:\CharteredAccountants-master\CharteredAccountants-master\CharteredAccountants\obj\Debug\CharteredAccountantsFYP.pdb

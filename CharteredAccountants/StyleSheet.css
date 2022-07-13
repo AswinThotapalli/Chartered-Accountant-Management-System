@@ -1,0 +1,667 @@
+﻿body {
+    /*background: url(images/BG.png) repeat;*/ 
+   background-color: white;
+    font-size: 85%;
+    font-family: Arial, 'Lucida Sans Unicode';
+    /*line-height: 1.5;*/
+    text-align: left;
+}
+
+a {
+    text-decoration: none; /*removes default underlines etc*/
+}
+
+.body {
+    margin: 0 auto;
+    width: 100%;
+    clear: both;
+}
+/*it allows that the container will not have any floating elements on there right and left*/
+
+.mainHeader nav {
+    background-color: #1488e0;
+    height: 40px; 
+    font-weight: bold;
+}
+
+    .mainHeader nav ul {
+        list-style: none;
+        margin: 0 auto; /*removing margin betweem logo and nav ul*/
+    }
+
+        .mainHeader nav ul li { /*list items*/
+            float: left;
+            display: inline;
+        }
+
+    .mainHeader nav a:link, .mainHeader nav a:visited {
+        color: #FFF;
+        display: inline-block;
+        padding: 10px 15px;
+        height: 20px;
+    }
+
+    .mainHeader nav a:hover, .mainHeader nav a:active {
+        background-color: #115c94;
+        text-shadow: none;
+        color: white;
+    }
+
+    .mainHeader nav .mainHeader nav .HomeNav a:visited {
+        background-color: #a40a0a;
+        text-shadow: none;
+    }
+
+
+.QuickSearch {
+    float: left;
+    margin-left: 2%;
+
+}
+    .QuickSearch span {
+    color: #FFFFFF; 
+    font-family: Arial,'Lucida Sans Unicode'; 
+    font-size: 100%; 
+    margin-right: 3px;
+}
+
+.quickSearchTexBox {
+   width:76%;
+border-radius: 7px;  
+-moz-border-radius: 7px;  
+-webkit-border-radius: 7px;
+
+}
+
+.LogOutUser {
+    margin-right: 3%;
+    
+}
+
+    .LogOutUser a:hover {
+        background-color: #e8e7e7;
+        text-shadow: none;
+        color: black;
+    }
+
+.mainHeader nav ul li a { /*round <a> i.e Home etc*/
+    border-radius: 5px; /*Round*/
+    -moz-border-radius: 5px; /*for mozila*/
+    -webkit-border-radius: 5px; /*for other web kits*/
+}
+
+
+.IssueTrackingContent {
+    width: 50%;
+    float: left;
+    background-color: #FFF;
+    border-radius: 5px; /*Round*/
+    -moz-border-radius: 5px; /*for mozila*/
+    -webkit-border-radius: 5px;
+    margin-left: .5%;
+    
+}
+
+.EventTrackingContent {
+    width: 48%;
+    float: right;
+    background-color: #FFF;
+    border-radius: 5px; /*Round*/
+    -moz-border-radius: 5px; /*for mozila*/
+    -webkit-border-radius: 5px;
+    margin-top: 0.1%;
+    margin-right: .5%;
+ 
+}
+/************************************************/
+#issueTrackingHeadBar {
+    background-color: #1488e0;
+    color: white;
+    width: 99%;
+    height: 45px;
+    display: inline-block;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding-right: .5%;
+    padding-left: .5%;
+    font-size: 17px;
+    margin-top: 8px;
+}
+
+#EventTrackingHeadBar {
+    background-color: #1488e0;
+    color: white;
+    width: 99%;
+    height: 45px;
+    display: inline-block;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding-right: .5%;
+    padding-left: .5%;
+    font-size: 17px;
+}
+
+.TextButton {
+background-color: #1488e0;
+    border-radius: 1018px;
+    color: white;
+    font-weight: bold;
+    padding: 7px;
+}
+
+/*#region LOGIN CSS*/
+
+
+.changePassBack {
+    height: 350px;
+    width: 350px;
+    margin: 3% auto 0;
+
+    background-color: whitesmoke;
+    border: 1px solid #1488e0;
+    padding: 2%;
+     border-radius: 1550px; /*Round*/
+    -moz-border-radius: 1550px; /*for mozila*/
+    -webkit-border-radius: 1550px;
+
+}
+
+#SignUpBack {
+    margin: 0 auto;
+    width: 500px;
+    height: 500px;
+    background-color: whitesmoke;
+    margin-top: 5%;
+    padding: 1%;
+     border-radius: 1135px; /*Round*/
+    -moz-border-radius: 1135px; /*for mozila*/
+    -webkit-border-radius: 1135px;
+    
+    /*box-shadow: #1488e0 0px 0px 1px;
+    -moz-box-shadow: #1488e0 0px 0px 1px;
+    -webkit-box-shadow: #1488e0 0px 0px 1px;*/
+        border: 1px solid #1488e0;
+     /*box-shadow: whitesmoke 0px 0px 50px;
+    -moz-box-shadow: whitesmoke 0px 0px 50px;
+    -webkit-box-shadow: whitesmoke 0px 0px 50px;*/
+}
+
+#SignUpBack p {
+    font-size: 15px;
+    color: #474e69;
+ 
+}
+
+.SignUpBackButton {
+      height: 77px;
+
+}
+
+ .ChangePassButton {
+      height: 77px;
+}
+
+.tblSignUpBack {
+margin-left: 105px;
+    margin-top: 8px;
+    width: 100%;
+}
+
+.changePassImage { text-align: center; margin-left: -30%}
+
+#LoginBack {
+
+    margin: 0 auto;
+    width: 400px;
+    height: 400px;
+    background-color: whitesmoke;
+    margin-top: 2%;
+    padding: 1%;
+    border: 1px solid #1488e0;
+    border-radius: 1135px; /*Round*/
+    -moz-border-radius: 1135px; /*for mozila*/
+    -webkit-border-radius: 1135px;
+    
+    /*box-shadow: black 0px 0px 1px;
+    -moz-box-shadow: black 0px 0px 1px;
+    -webkit-box-shadow: black 0px 0px 1px;*/
+
+    /*box-shadow: whitesmoke 0px 0px 50px;
+    -moz-box-shadow: whitesmoke 0px 0px 50px;
+    -webkit-box-shadow: whitesmoke 0px 0px 50px;*/
+
+}
+
+#LoginBack p {
+    font-size: 15px;
+    color: #474e69;
+
+}
+
+.changePassInnerImage 
+{ 
+    border-radius: 1000px; height: 69px; border: 1px solid #3cb9f8; margin-top: -13px;
+}
+
+.changepassTbl {
+    margin-left: 26px;
+    margin-top: 14px;
+    width: 326px;
+}
+
+.LoginBackButton {
+
+        height:87px; width:292px;
+        margin-top: 8px;
+}
+
+/*#endregion*/
+
+
+/*#region HELPERS CSS*/
+
+.AllTextBox {
+    padding: 6px;
+    border: 2px solid #e5e5e5;
+    color: #474e69;
+    box-shadow: rgba(0,0,0,0.2) 0px 0px 9px;
+    -moz-box-shadow: rgba(0,0,0,0.2) 0px 0px 8px;
+    -webkit-box-shadow: rgba(0,0,0,0.2) 0px 0px 8px;
+    margin-left: 0px;
+}
+
+    .AllTextBox:hover, .AllTextBox:focus {
+        border: 2px solid #3cb9f8;
+        box-shadow: rgba(0,  126, 255, 0.7) 0px 0px 8px;
+        -moz-box-shadow: rgba(0,  126, 255, 0.7) 0px 0px 8px;
+        -webkit-box-shadow: rgba(0,  126, 255, 0.7) 0px 0px 8px;
+    }
+
+.AllButtons {
+    height:68px; 
+    margin-top: 5px;
+    border-radius: 1135px; /*Round*/
+    -moz-border-radius: 1135px; /*for mozila*/
+    -webkit-border-radius: 1135px;
+}
+
+.AllButtons:hover, .AllButtons:focus {
+       border: 1px solid #3cb9f8;
+       box-shadow: rgba(0, 156, 255, 0.7) 0px 0px 8px;
+       -moz-box-shadow: rgba(0, 156, 255, 0.7) 0px 0px 8px;
+       -webkit-box-shadow: rgba(0, 156, 255, 0.7) 0px 0px 8px;
+  
+}
+
+/*#endregion*/
+
+/*#region Admin CSS*/
+
+.AdminBackAddEvent {
+    border:1px solid #1488e0;
+        float: left;
+        width: 67%;
+        background-color: whitesmoke;
+        margin-top: 1.5%;
+        padding: 2%;
+        border-radius: 34px; /*Round*/
+        -moz-border-radius: 34px; /*for mozila*/
+        -webkit-border-radius: 34px;
+    /*opacity: 0.8;*/
+    margin-left: 15%;
+    }
+
+        .AdminBackAddEvent p {
+            font-size: 15px;
+            color: #474e69;
+            width: 181px;
+    }
+        .EditUserProfile {
+            width: 47%; margin-left: 26%;
+
+        float: left;
+
+        background-color: whitesmoke;
+        margin-top: 1.5%;
+        padding: 2%;
+        border-radius: 34px; /*Round*/
+        -moz-border-radius: 34px; /*for mozila*/
+        -webkit-border-radius: 34px;
+
+    }
+
+        .EditUserProfile p {
+            font-size: 15px;
+            color: #474e69;
+            width: 181px;
+    }
+        
+
+        .OnlineUsers {
+        float: left;
+        width: 67%;
+        background-color: whitesmoke;
+        margin-top: 1.5%;
+        padding: 2%;
+        border-radius: 34px; /*Round*/
+        -moz-border-radius: 34px; /*for mozila*/
+        -webkit-border-radius: 34px;
+    /*opacity: 0.8;*/
+    margin-left: 15%;
+    }
+
+        .OnlineUsers p {
+            font-size: 15px;
+            color: #474e69;
+            width: 181px;
+    }
+
+
+/*#endregion*/
+
+/*#region Admin CSS*/
+
+.GridAdmin_User{
+    background-color: whitesmoke;
+
+    float: left;
+    margin-bottom: 1.5%;
+    margin-left: 0.3%;
+    margin-top: -0.5%;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 1%;
+    width: 97.5%;
+   
+    border-radius: 5px; /*Round*/
+    -moz-border-radius: 5px; /*for mozila*/
+    -webkit-border-radius: 5px;
+    box-shadow: inactivecaption 0px 0px 6px;
+    -moz-box-shadow: inactivecaption 0px 0px 6px;
+    -webkit-box-shadow: inactivecaption 0px 0px 6px;
+}
+
+    .GridAdmin_User p {
+        font-size: 17px;
+        color: #474e69;
+        width: 118px;
+    }
+
+/*#endregion*/
+
+.FontSize {
+  color:#474E69;
+  font-size:15px;
+}
+
+.fontAlignMiddle {
+text-align:center;
+}
+
+.Scroller {
+  
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.cellWidth {
+    width:20%;
+    color:white;
+}
+
+.TextBoxSearch {
+    float:right; margin-left: 20px; display: flex;
+}
+.footer {
+    background-color: #1488e0;
+    height: 30px;
+    width: 100%;
+}
+
+
+
+/******************************************************/
+/**************************CSS3************************/
+/******************************************************/
+
+@media only screen and (min-width: 150px) and (max-width:878px) {
+    .body {
+        font-size: 95%;
+        width: 100%;
+    }
+
+    .mainHeader nav {
+        height: 160px;
+    }
+
+        .mainHeader nav ul { /*now every nav ul will start from the left*/
+            padding-left: 0;
+        }
+
+            .mainHeader nav ul li { /*list items*/
+                width: 100%; /*becz list will now float on each other*/
+                text-align: center;
+            }
+            .mainHeader nav ul li a { /*round <a> i.e Home etc*/
+    border-radius: 0px; /*Round*/
+    -moz-border-radius: 0px; /*for mozila*/
+    -webkit-border-radius: 0px; /*for other web kits*/
+}
+    .LogOutUser {
+        margin-right: 0%;
+        float: right;
+        background-color: black;
+    }
+
+        .LogOutUser a:hover {
+            border-bottom-right-radius: 0px;
+            border-bottom-left-radius: 0px;
+        }
+
+    .mainHeader nav a:link, .mainHeader nav a:visited {
+        display: block;
+    }
+
+    .IssueTrackingContent {
+        width: 99%;
+        float: left;
+        margin-left: .5%;
+        margin-top: 1%;
+    }
+
+    .EventTrackingContent {
+        width: 99%;
+        float: left;
+        margin-left: .5%;
+        margin-top: 1%;
+    }
+    
+
+    .AllTextBox {
+    padding: 6px;
+    Width:80%;
+    margin-left: 0px;
+}
+    .Radio {
+    Width: 68%;
+}
+    .quickSearchTexBox {
+    margin-left:2px;
+    float: left;
+    Width:50%;
+   
+}
+   .TextBoxSearch {
+   margin-right: 209px;
+   margin-left: -5px;
+}
+
+    .AllButtons {
+    height: 45px;
+}
+
+     .changePassBack {
+          width: 87%;
+margin-top: 139px;
+    background-color: whitesmoke;
+    border: 1px solid #1488e0;
+    
+     border-radius: 5px; /*Round*/
+    -moz-border-radius: 5px; /*for mozila*/
+    -webkit-border-radius: 5px;
+
+}
+.changePassImage 
+{ 
+    text-align: center; 
+    margin-left: -14%;
+    margin-top: 5px;
+}
+
+.changePassInnerImage 
+{ 
+    border: 1px solid #3cb9f8;
+    border-radius: 1000px;
+    height: 61px;
+    margin-top: -7px;
+}
+
+
+
+    #SignUpBack {
+        width: 90%;
+        padding: 3% 5%;
+        margin-top: 2%;
+         border-radius: 5px; /*Round*/
+    -moz-border-radius: 5px; /*for mozila*/
+    -webkit-border-radius: 5px;
+    }
+    #SignUpBack p {
+    font-size: 12px;
+}
+
+    .tblSignUpBack {
+margin-left: 21%;
+    margin-top: 8px;
+    width: 100%;
+}
+    #LoginBack {
+        width: 90%;
+        padding: 3% 5%;
+        margin-top: 2%;
+
+        border-radius: 5px; /*Round*/
+    -moz-border-radius: 5px; /*for mozila*/
+    -webkit-border-radius: 5px;
+
+    }
+    #LoginBack p {
+    font-size: 12px;
+}
+     .SignUpBackButton {
+      height: 65px;
+    width: 57%;
+}
+     .ChangePassButton {
+      height: 77px;
+      width: 93%;
+}
+
+    .LoginBackButton {
+    height: 75px;
+    width: 72%;
+}
+    .CheckBoxText {
+        font-size:12px;
+    }
+
+   .changepassTbl {
+     margin-left: 6%;
+    margin-top: 18px;
+    width: 90%;
+}
+
+    .AdminBackAddEvent {
+    float: left;
+    width: 98%;
+    background-color: whitesmoke;
+    margin-top: 1.5%;
+    padding: 1%;
+    margin-left: 1%;
+    width: 96%;
+
+     border-radius: 15px; /*Round*/
+        -moz-border-radius: 15px; /*for mozila*/
+        -webkit-border-radius: 15px;
+    }
+    
+    .AdminBackAddEvent p {
+       font-size: 14px;
+       color: #474e69;
+       width: 120px;
+    }
+
+    .EditUserProfile {
+
+    float: left;
+    width: 98%;
+    background-color: whitesmoke;
+    margin-top: 1.5%;
+    padding: 1%;
+    margin-left: 1%;
+    width: 96%;
+
+     border-radius: 15px; /*Round*/
+        -moz-border-radius: 15px; /*for mozila*/
+        -webkit-border-radius: 15px;
+    }
+    
+    .EditUserProfile p {
+       font-size: 14px;
+       color: #474e69;
+       width: 120px;
+    }
+
+    .OnlineUsers {
+    float: left;
+    width: 98%;
+    background-color: whitesmoke;
+    margin-top: 1.5%;
+    padding: 1%;
+    margin-left: 1%;
+    width: 96%;
+
+     border-radius: 15px; /*Round*/
+        -moz-border-radius: 15px; /*for mozila*/
+        -webkit-border-radius: 15px;
+    }
+    
+    .OnlineUsers p {
+       font-size: 14px;
+       color: #474e69;
+       width: 120px;
+    }
+    
+     #GridAdmin_User {
+        width: 40%;
+        padding-top: 2%;
+        padding-left: 2%;
+        padding-right: 2%;
+        background-color: whitesmoke;
+        margin-left: 2%;
+        margin-bottom: 2%;
+    }
+
+        #GridAdmin_User p {
+            font-size: 12px;
+            color: #474e69;
+        }
+    .NavBorder {
+    border-top: 1px solid white;
+    }
+
+    .NavThirdLast {
+    margin-top: -2.5px;
+    }
+    
+}

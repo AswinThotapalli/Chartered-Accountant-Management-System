@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="CA_DB" Class="DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\CA_DB.mdf;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="CA_DBConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.TblTasks" Member="TblTasks">
+    <Type Name="TblTask">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Discription" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="Assignee" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Priority" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="ImageLink" Type="System.String" DbType="VarChar(2000) NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="StatusChangedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="UpdatedBy" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DeletedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Association Name="TblTask_TblTasksRemark" Member="TblTasksRemarks" ThisKey="Id" OtherKey="TaskId" Type="TblTasksRemark" />
+      <Association Name="TblUser_TblTask" Member="TblUser" ThisKey="UserId" OtherKey="Id" Type="TblUser" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TblEvents" Member="TblEvents">
+    <Type Name="TblEvent">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Discription" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="imageURL" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EventDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DeletedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="UpdatedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Association Name="TblEvent_TblEventsRemark" Member="TblEventsRemarks" ThisKey="Id" OtherKey="EventId" Type="TblEventsRemark" />
+      <Association Name="TblUser_TblEvent" Member="TblUser" ThisKey="UserId" OtherKey="Id" Type="TblUser" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TblServices" Member="TblServices">
+    <Type Name="TblService">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ClientId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Audit" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Corporate" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Accounting" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Legal" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Taxation" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="TblClient_TblService" Member="TblClient" ThisKey="ClientId" OtherKey="Id" Type="TblClient" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TblUsers" Member="TblUsers">
+    <Type Name="TblUser">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="IsAdmin" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsOnline" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="imageURL" Type="System.String" DbType="VarChar(2100) NOT NULL" CanBeNull="false" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ImageURL_DDL" Type="System.String" DbType="VarChar(2100) NOT NULL" CanBeNull="false" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="TblUser_TblTask" Member="TblTasks" ThisKey="Id" OtherKey="UserId" Type="TblTask" />
+      <Association Name="TblUser_TblEvent" Member="TblEvents" ThisKey="Id" OtherKey="UserId" Type="TblEvent" />
+      <Association Name="TblUser_TblTasksRemark" Member="TblTasksRemarks" ThisKey="Id" OtherKey="CommenterId" Type="TblTasksRemark" />
+      <Association Name="TblUser_TblEventsRemark" Member="TblEventsRemarks" ThisKey="Id" OtherKey="CommenterId" Type="TblEventsRemark" />
+      <Association Name="TblUser_TblAudit" Member="TblAudits" ThisKey="Id" OtherKey="UserId" Type="TblAudit" />
+      <Association Name="TblUser_TblCorporate" Member="TblCorporates" ThisKey="Id" OtherKey="UserId" Type="TblCorporate" />
+      <Association Name="TblUser_TblTax" Member="TblTaxes" ThisKey="Id" OtherKey="UserId" Type="TblTax" />
+      <Association Name="TblUser_TblClient" Member="TblClients" ThisKey="Id" OtherKey="UserId" Type="TblClient" />
+      <Association Name="TblUser_tblAttendance" Member="tblAttendances" ThisKey="Id" OtherKey="UserId" Type="tblAttendance" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TblTasksRemarks" Member="TblTasksRemarks">
+    <Type Name="TblTasksRemark">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CommenterId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Comment" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="TaskId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Association Name="TblUser_TblTasksRemark" Member="TblUser" ThisKey="CommenterId" OtherKey="Id" Type="TblUser" IsForeignKey="true" />
+      <Association Name="TblTask_TblTasksRemark" Member="TblTask" ThisKey="TaskId" OtherKey="Id" Type="TblTask" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TblEventsRemarks" Member="TblEventsRemarks">
+    <Type Name="TblEventsRemark">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CommenterId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Comment" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="EventId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="TblUser_TblEventsRemark" Member="TblUser" ThisKey="CommenterId" OtherKey="Id" Type="TblUser" IsForeignKey="true" />
+      <Association Name="TblEvent_TblEventsRemark" Member="TblEvent" ThisKey="EventId" OtherKey="Id" Type="TblEvent" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TblCounter" Member="TblCounters">
+    <Type Name="TblCounter">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="count" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TblYear" Member="TblYears">
+    <Type Name="TblYear">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Year" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="TblYear_TblAudit" Member="TblAudits" ThisKey="Id" OtherKey="YearId" Type="TblAudit" />
+      <Association Name="TblYear_TblCorporate" Member="TblCorporates" ThisKey="Id" OtherKey="YearId" Type="TblCorporate" />
+      <Association Name="TblYear_TblTax" Member="TblTaxes" ThisKey="Id" OtherKey="YearId" Type="TblTax" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TblAudit" Member="TblAudits">
+    <Type Name="TblAudit">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ClientId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="YearId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastChangesInfo" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="UpdatedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="FilePathNew" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="FilePathOld" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Association Name="TblUser_TblAudit" Member="TblUser" ThisKey="UserId" OtherKey="Id" Type="TblUser" IsForeignKey="true" />
+      <Association Name="TblYear_TblAudit" Member="TblYear" ThisKey="YearId" OtherKey="Id" Type="TblYear" IsForeignKey="true" />
+      <Association Name="TblClient_TblAudit" Member="TblClient" ThisKey="ClientId" OtherKey="Id" Type="TblClient" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TblCorporate" Member="TblCorporates">
+    <Type Name="TblCorporate">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ClientId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="YearId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastChangesInfo" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="UpdatedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="FilePathNew" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="FilePathOld" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Association Name="TblUser_TblCorporate" Member="TblUser" ThisKey="UserId" OtherKey="Id" Type="TblUser" IsForeignKey="true" />
+      <Association Name="TblYear_TblCorporate" Member="TblYear" ThisKey="YearId" OtherKey="Id" Type="TblYear" IsForeignKey="true" />
+      <Association Name="TblClient_TblCorporate" Member="TblClient" ThisKey="ClientId" OtherKey="Id" Type="TblClient" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TblTax" Member="TblTaxes">
+    <Type Name="TblTax">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ClientId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="YearId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastChangesInfo" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="UpdatedBy" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="FilePathNew" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="FilePathOld" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Association Name="TblUser_TblTax" Member="TblUser" ThisKey="UserId" OtherKey="Id" Type="TblUser" IsForeignKey="true" />
+      <Association Name="TblYear_TblTax" Member="TblYear" ThisKey="YearId" OtherKey="Id" Type="TblYear" IsForeignKey="true" />
+      <Association Name="TblClient_TblTax" Member="TblClient" ThisKey="ClientId" OtherKey="Id" Type="TblClient" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TblClients" Member="TblClients">
+    <Type Name="TblClient">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="BusinessType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TypeOfCompany" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LimitedBy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ShareValue1" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ShareValue2" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ShareCapitalProduct" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="BusinessObjectives" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CNIC" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="IncorporationNo" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="RegistrationNo" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="RegisteredWith" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="PhoneNo" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="MobileNo" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="FaxNo" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedById" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdatedById" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="UpdatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NTN" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="PINCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FBRLogin" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FBRPassword" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Association Name="TblClient_TblService" Member="TblServices" ThisKey="Id" OtherKey="ClientId" Type="TblService" />
+      <Association Name="TblClient_TblAudit" Member="TblAudits" ThisKey="Id" OtherKey="ClientId" Type="TblAudit" />
+      <Association Name="TblClient_TblCorporate" Member="TblCorporates" ThisKey="Id" OtherKey="ClientId" Type="TblCorporate" />
+      <Association Name="TblClient_TblTax" Member="TblTaxes" ThisKey="Id" OtherKey="ClientId" Type="TblTax" />
+      <Association Name="TblClient_TblBusinessType" Member="TblBusinessTypes" ThisKey="Id" OtherKey="ClientId" Type="TblBusinessType" />
+      <Association Name="TblUser_TblClient" Member="TblUser" ThisKey="UserId" OtherKey="Id" Type="TblUser" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TblBusinessType" Member="TblBusinessTypes">
+    <Type Name="TblBusinessType">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ClientId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BusinessType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="TblClient_TblBusinessType" Member="TblClient" ThisKey="ClientId" OtherKey="Id" Type="TblClient" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblAttendance" Member="tblAttendances">
+    <Type Name="tblAttendance">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EnteranceTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ExitTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="IsPresent" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="TblUser_tblAttendance" Member="TblUser" ThisKey="UserId" OtherKey="Id" Type="TblUser" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

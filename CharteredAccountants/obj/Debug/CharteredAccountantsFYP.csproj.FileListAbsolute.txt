@@ -1,0 +1,28 @@
+C:\Users\Atezaz\documents\visual studio 2012\Projects\CharteredAccountantsFYP\CharteredAccountantsFYP\bin\CharteredAccountantsFYP.dll
+C:\Users\Atezaz\documents\visual studio 2012\Projects\CharteredAccountantsFYP\CharteredAccountantsFYP\bin\CharteredAccountantsFYP.pdb
+C:\Users\Atezaz\documents\visual studio 2012\Projects\CharteredAccountantsFYP\CharteredAccountantsFYP\obj\Debug\CharteredAccountantsFYP.dll
+C:\Users\Atezaz\documents\visual studio 2012\Projects\CharteredAccountantsFYP\CharteredAccountantsFYP\obj\Debug\CharteredAccountantsFYP.pdb
+E:\per\FYP Code\CharteredAccountantsFYP\CharteredAccountantsFYP\bin\CharteredAccountantsFYP.dll.config
+E:\per\FYP Code\CharteredAccountantsFYP\CharteredAccountantsFYP\bin\CharteredAccountantsFYP.dll
+E:\per\FYP Code\CharteredAccountantsFYP\CharteredAccountantsFYP\bin\CharteredAccountantsFYP.pdb
+E:\per\FYP Code\CharteredAccountantsFYP\CharteredAccountantsFYP\obj\Debug\CharteredAccountantsFYP.dll
+E:\per\FYP Code\CharteredAccountantsFYP\CharteredAccountantsFYP\obj\Debug\CharteredAccountantsFYP.pdb
+E:\per\FYP Code\CharteredAccountantsFYP\CharteredAccountantsFYP\obj\Debug\CharteredAccountantsFYP.csprojResolveAssemblyReference.cache
+F:\CharteredAccountantsFYP\CharteredAccountantsFYP\bin\CharteredAccountantsFYP.dll.config
+F:\CharteredAccountantsFYP\CharteredAccountantsFYP\bin\CharteredAccountantsFYP.dll
+F:\CharteredAccountantsFYP\CharteredAccountantsFYP\bin\CharteredAccountantsFYP.pdb
+F:\CharteredAccountantsFYP\CharteredAccountantsFYP\obj\Debug\CharteredAccountantsFYP.dll
+F:\CharteredAccountantsFYP\CharteredAccountantsFYP\obj\Debug\CharteredAccountantsFYP.pdb
+F:\CharteredAccountantsFYP\CharteredAccountantsFYP\obj\Debug\CharteredAccountantsFYP.csprojResolveAssemblyReference.cache
+D:\CharteredAccountantsFYP\CharteredAccountantsFYP\bin\CharteredAccountantsFYP.dll.config
+D:\CharteredAccountantsFYP\CharteredAccountantsFYP\bin\CharteredAccountantsFYP.dll
+D:\CharteredAccountantsFYP\CharteredAccountantsFYP\bin\CharteredAccountantsFYP.pdb
+D:\CharteredAccountantsFYP\CharteredAccountantsFYP\obj\Debug\CharteredAccountantsFYP.dll
+D:\CharteredAccountantsFYP\CharteredAccountantsFYP\obj\Debug\CharteredAccountantsFYP.pdb
+D:\CharteredAccountantsFYP\CharteredAccountantsFYP\obj\Debug\CharteredAccountantsFYP.csprojResolveAssemblyReference.cache
+E:\CharteredAccountantsFYP\CharteredAccountantsFYP\bin\CharteredAccountantsFYP.dll.config
+E:\CharteredAccountantsFYP\CharteredAccountantsFYP\bin\CharteredAccountantsFYP.dll
+E:\CharteredAccountantsFYP\CharteredAccountantsFYP\bin\CharteredAccountantsFYP.pdb
+E:\CharteredAccountantsFYP\CharteredAccountantsFYP\obj\Debug\CharteredAccountantsFYP.csprojResolveAssemblyReference.cache
+E:\CharteredAccountantsFYP\CharteredAccountantsFYP\obj\Debug\CharteredAccountantsFYP.dll
+E:\CharteredAccountantsFYP\CharteredAccountantsFYP\obj\Debug\CharteredAccountantsFYP.pdb
